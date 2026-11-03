@@ -8,9 +8,9 @@ body {
     400 14px/1.6 "Poppins",
     sans-serif;
   background:
-    url("../image/testi/pattern-atas.jpg") center top / max(100vw, 1000px) auto
+    url("../../image/testi/pattern-atas.jpg") center top / max(100vw, 1000px) auto
       no-repeat,
-    url("../image/testi/pattern-tile.jpg") center calc(max(100vw, 1000px) * 0.5581) /
+    url("../../image/testi/pattern-tile.jpg") center calc(max(100vw, 1000px) * 0.5581) /
       max(100vw, 1000px) auto repeat-y,
     #ffad6d; /* pattern memenuhi halaman sampai bawah */
   color: #2b1a10;
