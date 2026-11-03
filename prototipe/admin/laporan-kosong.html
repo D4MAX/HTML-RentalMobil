@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laporan - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="" /><span>Gantengnya Admin<small>Rental Mobil</small></span></a>
+    <nav aria-label="Menu admin"><a href="dashboard.html">Dashboard</a><a href="kelola-mobil.html">Kelola Mobil</a><a href="pesanan.html">Pesanan</a><a href="servis.html">Servis</a><a class="aktif" href="laporan.html">Laporan</a></nav>
+    <div class="keluar"><a href="../guest/index.html">Keluar</a></div>
+  </aside>
+  <main class="main">
+    <header><h1>Laporan Transaksi</h1><p>Semua pendapatan dari pesanan yang sudah dikonfirmasi.</p></header>
+<form class="kartu filter" action="laporan-kosong.html" method="get">
+  <div><label for="per">Periode (menurut tanggal mulai sewa)</label><select id="per" name="periode"><option selected>7 hari terakhir</option><option>30 hari terakhir</option><option>Bulan ini</option><option>Bulan lalu</option></select></div>
+  <div><label for="st">Status</label><select id="st" name="status"><option value="">Semua</option><option>Menunggu pembayaran</option><option>Dikonfirmasi</option><option>Berjalan</option><option>Selesai</option><option>Pengajuan pembatalan</option><option>Dibatalkan</option></select></div>
+  <div><button class="btn" type="submit">Terapkan</button></div>
+  <div style="margin-left:auto"><a class="btn garis" href="laporan.pdf">Unduh PDF</a></div></form>
+<section class="kartu kosong"><div class="ikon" aria-hidden="true">📊</div><h2>Tidak ada data</h2><p class="abu">Tidak ada data pada periode ini. Pilih periode lain.</p><a class="btn" href="laporan.html">Kembali ke 7 hari terakhir</a></section>
+  </main>
+</div>
+</body>
+</html>

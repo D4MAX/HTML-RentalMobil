@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servis - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="" /><span>Gantengnya Admin<small>Rental Mobil</small></span></a>
+    <nav aria-label="Menu admin"><a href="dashboard.html">Dashboard</a><a href="kelola-mobil.html">Kelola Mobil</a><a href="pesanan.html">Pesanan</a><a class="aktif" href="servis.html">Servis</a><a href="laporan.html">Laporan</a></nav>
+    <div class="keluar"><a href="../guest/index.html">Keluar</a></div>
+  </aside>
+  <main class="main">
+    <header><h1>Servis Unit</h1><p>Catat dan pantau perawatan tiap unit.</p></header>
+<div class="grid grid-4">
+  <div class="kartu stat"><div class="label">Unit dalam servis</div><div class="angka">2</div></div>
+  <div class="kartu stat"><div class="label">Unit tersedia</div><div class="angka">14</div></div>
+  <div class="kartu stat"><div class="label">Biaya bengkel</div><div class="angka">Rp 3.600.000</div></div>
+  <div class="kartu stat"><div class="label">Biaya ditagih</div><div class="angka">Rp 1.000.000</div></div>
+</div>
+<section class="kartu jarak"><h2>Catat servis</h2><p class="ket">Servis juga dibuat otomatis dari pengembalian bila "unit perlu servis" dicentang.</p>
+<form action="servis.html" method="get">
+  <div class="kolom-3">
+    <div><label for="unit">Unit</label><select id="unit" name="unit" required><option value="">Pilih unit</option><option>N 1001 AA · Innova Reborn</option><option>N 1002 AB · Innova Reborn</option><option>N 2001 CA · Avanza 2024</option><option>N 3003 EF · Rush TRD</option><option>N 4004 GH · XL7</option><option>N 5005 GH · Brio</option><option>N 5006 GJ · Brio</option><option>N 6006 IJ · Alphard 2022</option></select></div>
+    <div><label for="jenis">Jenis servis</label><select id="jenis" name="jenis" required><option>Servis berkala</option><option>Perbaikan</option><option>Ganti ban</option><option>Lainnya</option></select></div>
+    <div><label for="tingkat">Tingkat</label><select id="tingkat" name="tingkat" required><option>Ringan</option><option>Sedang</option><option>Berat</option></select></div>
+    <div><label for="tgl">Tanggal masuk</label><input id="tgl" name="tgl_masuk" type="date" required /></div>
+    <div><label for="bengkel">Bengkel</label><input id="bengkel" name="bengkel" type="text" maxlength="100" /></div>
+    <div><label for="est">Estimasi biaya (Rp)</label><input id="est" name="estimasi" type="number" min="0" step="1000" /></div>
+    <div><label for="odo">Odometer (km)</label><input id="odo" name="odometer" type="number" min="0" step="1" required /><p class="hint">Tidak boleh lebih kecil dari odometer sebelumnya.</p></div>
+  </div>
+  <label for="ket">Keterangan</label><textarea id="ket" name="keterangan" maxlength="300"></textarea>
+  <button class="btn" type="submit">Catat servis</button>
+</form></section>
+<section class="kartu"><h2>Sedang servis</h2><div class="tabel-bungkus"><table class="tabel"><thead><tr><th>Unit</th><th>Jenis</th><th>Tingkat</th><th>Masuk</th><th>Bengkel</th><th class="angka">Estimasi</th><th></th></tr></thead><tbody><tr><td><span class="plat">N 5005 GH</span> Brio</td><td>Ganti oli dan rem</td><td>Sedang</td><td>2 Nov 2026</td><td>Bengkel Maju Jaya</td><td class="angka">Rp 850.000</td>
+      <td><a class="tautan" href="servis-selesai.html">Selesai</a> · <a class="tautan" href="#batal-servis">Batal</a></td></tr></tbody></table></div></section>
+<section class="kartu"><h2>Pengingat berkala</h2><p class="ket">Status dihitung tiap halaman dibuka dari odometer dan jadwal servis.</p>
+  <div class="tabel-bungkus"><table class="tabel"><thead><tr><th>Unit</th><th class="angka">Odometer</th><th class="angka">Servis terakhir</th><th class="angka">Jadwal berikutnya</th><th>Status</th></tr></thead><tbody><tr><td><span class="plat">N 6006 IJ</span> Alphard 2022</td><td class="angka">48.900 km</td><td class="angka">43.000 km</td><td class="angka">48.000 km</td><td><span class="badge perlu">Perlu servis</span></td></tr><tr><td><span class="plat">N 3003 EF</span> Rush TRD</td><td class="angka">45.000 km</td><td class="angka">40.800 km</td><td class="angka">45.800 km</td><td><span class="badge segera">Segera</span></td></tr><tr><td><span class="plat">N 1001 AA</span> Innova Reborn</td><td class="angka">62.400 km</td><td class="angka">60.000 km</td><td class="angka">65.000 km</td><td><span class="badge aman">Aman</span></td></tr><tr><td><span class="plat">N 4004 GH</span> XL7</td><td class="angka">22.800 km</td><td class="angka">-</td><td class="angka">-</td><td><span class="badge netral">Belum ada data</span></td></tr></tbody></table></div>
+  <form class="filter jarak" action="servis.html" method="get"><div><label for="interval">Interval servis (km)</label><input id="interval" name="interval" type="number" min="1000" step="500" value="5000" required /></div>
+  <div><button class="btn garis" type="submit">Simpan interval</button></div></form></section>
+<section class="kartu"><h2>Riwayat servis</h2><div class="tabel-bungkus"><table class="tabel"><thead><tr><th>Unit</th><th>Jenis</th><th>Tanggal</th><th>Bengkel</th><th class="angka">Biaya bengkel</th><th class="angka">Ditagih</th><th>Status</th></tr></thead><tbody><tr><td><span class="plat">N 1001 AA</span> Innova Reborn</td><td>Servis berkala</td><td>10 Sep 2026</td><td>Bengkel Maju Jaya</td><td class="angka">Rp 1.200.000</td><td class="angka">Rp 0</td><td>Selesai</td></tr>
+      <tr><td><span class="plat">N 3003 EF</span> Rush TRD</td><td>Ganti ban</td><td>15 Agu 2026</td><td>Ban Sentosa</td><td class="angka">Rp 2.400.000</td><td class="angka">Rp 1.000.000</td><td>Selesai</td></tr>
+      <tr><td><span class="plat">N 2001 CA</span> Avanza 2024</td><td>Pemeriksaan</td><td>1 Agu 2026</td><td>-</td><td class="angka">Rp 0</td><td class="angka">Rp 0</td><td>Dibatalkan</td></tr></tbody></table></div></section>
+<div class="modal" id="batal-servis" role="dialog" aria-modal="true" aria-label="Batalkan servis?">
+  <div class="isi"><h3>Batalkan servis?</h3><p>Servis dicatat dibatalkan dan unit kembali Tersedia.</p><div class="baris"><a class="btn garis sm" href="#">Kembali</a><a class="btn bahaya sm" href="servis.html">Ya, batalkan</a></div></div>
+</div>
+
+  </main>
+</div>
+</body>
+</html>

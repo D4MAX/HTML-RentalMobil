@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar - RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/index.css" />
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Logo RentalMalang" /> GANTENGNYAJATIMGROUP</a>
+  <input type="checkbox" id="burger-cek" class="burger-cek" aria-hidden="true" />
+  <label class="burger" for="burger-cek" aria-label="Buka menu">☰</label>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="katalog.html">Car</a>
+    <div class="kanan"><a class="btn garis" href="masuk.html">Masuk</a><a class="btn" href="daftar.html">Daftar</a></div>
+  </div>
+</nav>
+<section class="hero banner"><h1>DAFTAR</h1></section>
+<main class="wrap wrap-form"><div class="kotak kartu-akun"><div class="tab-akun"><a class="" href="masuk.html">Login</a><a class="aktif" href="daftar.html">Register</a></div><h1>Daftar</h1><form action="cek-email.html" method="get">
+  <div class="field"><label for="nama">Nama lengkap</label><input id="nama" name="nama" type="text" maxlength="100" required autocomplete="name" /></div>
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+  <div class="field"><label for="wa">Nomor WhatsApp</label><input id="wa" name="wa" type="tel" required pattern="(08|\+62)[0-9]{8,13}" title="Nomor Indonesia, diawali 08 atau +62" placeholder="08xxxxxxxxxx" /></div>
+  <div class="field"><label for="domisili">Domisili</label><select id="domisili" name="domisili" required><option value="">Pilih domisili</option><option>Malang</option><option>Luar kota</option></select>
+    <p class="hint">Menentukan syarat jaminan untuk sewa lepas kunci.</p></div>
+  <div class="field"><label for="sandi">Kata sandi</label><input id="sandi" name="sandi" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" />
+    <p class="hint">Minimal 8 karakter dan ada angka.</p></div>
+  <div class="field"><label for="sandi2">Konfirmasi kata sandi</label><input id="sandi2" name="sandi2" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" />
+    <p class="hint">Harus sama dengan kata sandi di atas.</p></div>
+  <button class="btn blok" type="submit">Daftar</button>
+</form>
+<div class="pemisah">atau</div>
+<a class="btn-google" href="../user/index.html"><img class="g" src="../img/google-logo.jpg" alt="" />Daftar dengan Google</a>
+
+</div></main></div>
+<footer class="footer">
+  <div class="footer-isi">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html"><img src="../img/gantengnyo.png" alt="Logo RentalMalang" /><span>GANTENGNYAJATIMGROUP</span></a>
+      <p>Layanan sewa mobil dengan sopir atau lepas kunci, siap menemani perjalananmu di Malang, Batu, dan sekitarnya.</p>
+      <div class="footer-sosial">
+        <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><img src="../img/ikon-wa.png" alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../img/ig.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-kolom">
+      <h4>Perusahaan</h4>
+      <a href="about.html">Tentang Kami</a>
+      <a href="syarat.html">Syarat dan Ketentuan</a>
+      <a href="privasi.html">Kebijakan Privasi</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Bantuan</h4>
+      <a href="faq.html">FAQ</a>
+      <a href="https://wa.me/6281234567890">Hubungi Admin</a>
+      <a href="katalog.html">Katalog Mobil</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Kontak</h4>
+      <p>PT GantengnyaJatim Group<br />Kota Malang, Jawa Timur</p>
+      <p>WhatsApp: 0812-3456-7890<br />Email: gantengnyajatimgroupindonesia@gmail.com</p>
+      <p>Jam operasional 07.00 sampai 21.00 setiap hari.</p>
+    </div>
+  </div>
+  <div class="footer-bawah">© 2026 RentalMalang. Hak Cipta Dilindungi.</div>
+</footer>
+</body>
+</html>

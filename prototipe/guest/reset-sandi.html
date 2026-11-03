@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buat Password Baru - RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/index.css" />
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Logo RentalMalang" /> GANTENGNYAJATIMGROUP</a>
+  <input type="checkbox" id="burger-cek" class="burger-cek" aria-hidden="true" />
+  <label class="burger" for="burger-cek" aria-label="Buka menu">☰</label>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="katalog.html">Car</a>
+    <div class="kanan"><a class="btn garis" href="masuk.html">Masuk</a><a class="btn" href="daftar.html">Daftar</a></div>
+  </div>
+</nav>
+<section class="hero banner"><h1>PASSWORD <span>BARU</span></h1></section>
+<main class="wrap wrap-form"><div class="kotak kartu-akun"><h1>Buat Password Baru</h1><form action="masuk.html" method="get">
+  <div class="field"><label for="sandi">Kata sandi baru</label><input id="sandi" name="sandi" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" />
+    <p class="hint">Minimal 8 karakter dan ada angka.</p></div>
+  <div class="field"><label for="sandi2">Ulangi kata sandi</label><input id="sandi2" name="sandi2" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" /></div>
+  <button class="btn blok" type="submit">Simpan</button>
+</form>
+
+</div></main></div>
+<footer class="footer">
+  <div class="footer-isi">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html"><img src="../img/gantengnyo.png" alt="Logo RentalMalang" /><span>GANTENGNYAJATIMGROUP</span></a>
+      <p>Layanan sewa mobil dengan sopir atau lepas kunci, siap menemani perjalananmu di Malang, Batu, dan sekitarnya.</p>
+      <div class="footer-sosial">
+        <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><img src="../img/ikon-wa.png" alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../img/ig.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-kolom">
+      <h4>Perusahaan</h4>
+      <a href="about.html">Tentang Kami</a>
+      <a href="syarat.html">Syarat dan Ketentuan</a>
+      <a href="privasi.html">Kebijakan Privasi</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Bantuan</h4>
+      <a href="faq.html">FAQ</a>
+      <a href="https://wa.me/6281234567890">Hubungi Admin</a>
+      <a href="katalog.html">Katalog Mobil</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Kontak</h4>
+      <p>PT GantengnyaJatim Group<br />Kota Malang, Jawa Timur</p>
+      <p>WhatsApp: 0812-3456-7890<br />Email: gantengnyajatimgroupindonesia@gmail.com</p>
+      <p>Jam operasional 07.00 sampai 21.00 setiap hari.</p>
+    </div>
+  </div>
+  <div class="footer-bawah">© 2026 RentalMalang. Hak Cipta Dilindungi.</div>
+</footer>
+</body>
+</html>

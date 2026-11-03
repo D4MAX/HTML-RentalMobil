@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selesaikan pesanan - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="Dashboard admin" /></a>
+  <span class="peran">Admin Rental</span>
+  <a class="btn garis sm" href="../guest/index.html">Keluar</a>
+</header>
+<main class="halaman">
+  <a class="kembali" href="detail-berjalan.html">← Kembali ke pesanan</a>
+<div class="kepala-halaman"><div><h1>Pengembalian dan pemeriksaan unit</h1>
+  <span class="abu">RM-20261101-0004 · Dimas Prakoso. Isi setelah mobil kembali, lalu catat kondisi dan biaya tambahan.</span></div></div>
+<form action="detail-selesai.html" method="get">
+<section class="kartu"><div class="kolom-4">
+  <div><span class="kecil abu">Pelanggan</span><br /><b>Dimas Prakoso</b></div><div><span class="kecil abu">Unit</span><br /><b>Rush TRD · N 3003 EF</b></div>
+  <div><span class="kecil abu">Tarif per hari</span><br /><b>Rp 375.000</b></div><div><span class="kecil abu">Kembali paling lambat</span><br /><b>5 Nov 2026, 23.59</b></div></div></section>
+
+<section class="kartu"><div class="langkah-judul"><span class="no">1</span><h2>Pengembalian</h2></div>
+  <p class="ket">Pelanggan boleh mengembalikan sampai pukul 23.59 tanggal kembali. Lewat itu dihitung 1 hari terlambat, hari berikutnya bertambah 1 hari.</p>
+  <div class="kolom-2">
+    <div><label for="tglk">Tanggal kembali</label><input id="tglk" name="tgl_kembali" type="date" required /></div>
+    <div><label for="jamk">Jam kembali</label><input id="jamk" name="jam_kembali" type="time" required /></div>
+    <div><label for="tarifd">Tarif denda per hari</label><input id="tarifd" name="tarif_denda" type="text" value="Rp 375.000" readonly /></div>
+    <div><label for="hari">Hari terlambat</label><input id="hari" name="hari_terlambat" type="number" min="0" step="1" value="0" required /></div>
+    <div><label for="odoa">Odometer awal (km)</label><input id="odoa" name="odometer_awal" type="number" value="45000" readonly /></div>
+    <div><label for="odoz">Odometer akhir (km)</label><input id="odoz" name="odometer_akhir" type="number" min="45000" step="1" required /></div>
+    <div><label for="bbmk">BBM saat kembali (awal: Penuh)</label><select id="bbmk" name="bbm_akhir" required><option>Penuh</option><option>3/4</option><option>1/2</option><option>1/4</option><option>Hampir kosong</option></select></div>
+    <div><label for="kurang">Biaya kekurangan BBM</label><input id="kurang" name="biaya_bbm" type="number" min="0" step="1000" value="0" /></div>
+    <div><label for="bersih">Kebersihan</label><select id="bersih" name="kebersihan"><option>Bersih</option><option>Cukup</option><option>Kotor</option></select></div>
+  </div>
+</section>
+
+<section class="kartu"><div class="langkah-judul"><span class="no">2</span><h2>Pemeriksaan Kondisi</h2></div>
+  <p class="ket">Isi tiap bagian. Foto wajib jika ada kerusakan.</p>
+  <div class="tabel-bungkus"><table class="tabel"><thead><tr><th>Bagian</th><th>Kondisi</th><th>Biaya perbaikan (Rp)</th><th>Keterangan</th></tr></thead><tbody><tr><td class="tebal">Depan (bumper dan kap)</td><td><select name="kondisi_1" aria-label="Kondisi Depan (bumper dan kap)" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_1" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Depan (bumper dan kap)" /></td><td><input name="ket_1" type="text" maxlength="150" aria-label="Keterangan Depan (bumper dan kap)" placeholder="Opsional" /></td></tr><tr><td class="tebal">Belakang (bumper dan bagasi)</td><td><select name="kondisi_2" aria-label="Kondisi Belakang (bumper dan bagasi)" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_2" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Belakang (bumper dan bagasi)" /></td><td><input name="ket_2" type="text" maxlength="150" aria-label="Keterangan Belakang (bumper dan bagasi)" placeholder="Opsional" /></td></tr><tr><td class="tebal">Sisi kiri</td><td><select name="kondisi_3" aria-label="Kondisi Sisi kiri" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_3" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Sisi kiri" /></td><td><input name="ket_3" type="text" maxlength="150" aria-label="Keterangan Sisi kiri" placeholder="Opsional" /></td></tr><tr><td class="tebal">Sisi kanan</td><td><select name="kondisi_4" aria-label="Kondisi Sisi kanan" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_4" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Sisi kanan" /></td><td><input name="ket_4" type="text" maxlength="150" aria-label="Keterangan Sisi kanan" placeholder="Opsional" /></td></tr><tr><td class="tebal">Atap</td><td><select name="kondisi_5" aria-label="Kondisi Atap" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_5" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Atap" /></td><td><input name="ket_5" type="text" maxlength="150" aria-label="Keterangan Atap" placeholder="Opsional" /></td></tr><tr><td class="tebal">Kaca dan lampu</td><td><select name="kondisi_6" aria-label="Kondisi Kaca dan lampu" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_6" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Kaca dan lampu" /></td><td><input name="ket_6" type="text" maxlength="150" aria-label="Keterangan Kaca dan lampu" placeholder="Opsional" /></td></tr><tr><td class="tebal">Ban dan velg</td><td><select name="kondisi_7" aria-label="Kondisi Ban dan velg" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_7" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Ban dan velg" /></td><td><input name="ket_7" type="text" maxlength="150" aria-label="Keterangan Ban dan velg" placeholder="Opsional" /></td></tr><tr><td class="tebal">Interior</td><td><select name="kondisi_8" aria-label="Kondisi Interior" required><option>Baik</option><option>Lecet</option><option>Penyok</option><option>Retak</option><option>Rusak</option></select></td><td><input name="biaya_8" type="number" min="0" step="1000" value="0" aria-label="Biaya perbaikan Interior" /></td><td><input name="ket_8" type="text" maxlength="150" aria-label="Keterangan Interior" placeholder="Opsional" /></td></tr></tbody></table></div>
+  <label for="fotok" class="jarak">Foto kondisi (wajib jika ada kerusakan)</label><input id="fotok" name="foto_kondisi" type="file" accept="image/jpeg,image/png" multiple />
+</section>
+
+<section class="kartu"><div class="langkah-judul"><span class="no">3</span><h2>Biaya Tambahan Lain</h2></div>
+  <p class="ket">Isi hanya yang berlaku.</p><div class="kolom-4"><div><label for="l1">Cuci</label><input id="l1" name="lain_1" type="number" min="0" step="1000" value="0" /></div><div><label for="l2">Kelengkapan hilang</label><input id="l2" name="lain_2" type="number" min="0" step="1000" value="0" /></div><div><label for="l3">Tol</label><input id="l3" name="lain_3" type="number" min="0" step="1000" value="0" /></div><div><label for="l4">Parkir</label><input id="l4" name="lain_4" type="number" min="0" step="1000" value="0" /></div><div><label for="l5">Lainnya</label><input id="l5" name="lain_5" type="number" min="0" step="1000" value="0" /></div></div></section>
+
+<section class="kartu"><div class="langkah-judul"><span class="no">4</span><h2>Pengembalian Jaminan</h2></div>
+  <p class="ket">Jaminan ditahan selama tagihan tambahan belum dibayar. Centang hanya jika tagihan nol atau sudah lunas.</p>
+  <div class="cek"><input type="checkbox" id="k1" name="k1" /><label for="k1">KTP asli</label></div>
+  <div class="cek"><input type="checkbox" id="k2" name="k2" /><label for="k2">SIM C asli</label></div>
+  <div class="cek"><input type="checkbox" id="k3" name="k3" /><label for="k3">KTM, KK, NPWP, BPJS, atau paspor</label></div>
+  <div class="cek"><input type="checkbox" id="k4" name="k4" /><label for="k4">Sepeda motor dan STNK</label></div>
+</section>
+
+<section class="kartu"><div class="langkah-judul"><span class="no">5</span><h2>Konfirmasi</h2></div>
+  <label for="catat">Catatan admin</label><textarea id="catat" name="catatan_admin" maxlength="500"></textarea>
+  <div class="cek"><input type="checkbox" id="servis" name="perlu_servis" /><label for="servis">Unit perlu servis</label></div>
+  <div class="kolom-2"><div><label for="tingkat">Tingkat servis</label><select id="tingkat" name="tingkat"><option>Ringan</option><option>Sedang</option><option>Berat</option></select></div>
+    <div><label for="perlu">Keperluan servis</label><input id="perlu" name="keperluan" type="text" maxlength="150" /></div></div>
+  <p class="hint">Diisi bila "Unit perlu servis" dicentang. Servis dibuat otomatis dengan asal pesanan tercatat.</p>
+  <div class="cek"><input type="checkbox" id="setuju" name="persetujuan" required /><label for="setuju">Penyewa sudah melihat dan menyetujui hasil pemeriksaan.</label></div>
+  <label for="byr">Status pembayaran tagihan</label>
+  <select id="byr" name="status_tagihan" required><option>Belum dibayar</option><option>Tunai</option><option>Transfer</option></select>
+</section>
+<section class="kartu"><h2>Ringkasan Biaya</h2><p class="ket">Dihitung sistem saat form diisi.</p>
+  <div class="ringkasan">
+    <div class="baris"><span>Denda keterlambatan</span><span>Rp 0</span></div>
+    <div class="baris"><span>Kekurangan BBM</span><span>Rp 0</span></div>
+    <div class="baris"><span>Kerusakan</span><span>Rp 0</span></div>
+    <div class="baris"><span>Biaya lain</span><span>Rp 0</span></div>
+    <div class="baris total"><span>Tagihan tambahan</span><span>Rp 0</span></div>
+  </div>
+  <button class="btn jarak" type="submit">Selesaikan pesanan</button>
+  <p class="kecil abu" style="margin-top:8px">Setelah disimpan, pesanan menjadi Selesai dan unit tersedia atau masuk servis.</p>
+</section>
+</form>
+
+</main>
+</body>
+</html>

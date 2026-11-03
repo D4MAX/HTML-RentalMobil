@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit mobil - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="Dashboard admin" /></a>
+  <span class="peran">Admin Rental</span>
+  <a class="btn garis sm" href="../guest/index.html">Keluar</a>
+</header>
+<main class="halaman">
+  <a class="kembali" href="kelola-mobil.html">← Kembali ke Kelola Mobil</a>
+<div class="kepala-halaman"><div><h1>Unit mobil</h1><span class="abu">Tambah atau ubah unit.</span></div></div><form id="form-unit" action="kelola-mobil.html" method="get">
+<section class="kartu"><h2>Data unit</h2>
+  <div class="kolom-2">
+    <div><label for="tipe">Tipe</label><select id="tipe" name="tipe" required><option value="">Pilih tipe</option><option>Innova Reborn</option><option>Avanza 2024</option><option>Rush TRD</option><option>XL7</option><option>Brio</option><option>Alphard 2022</option></select></div>
+    <div><label for="plat">Plat nomor</label><input id="plat" name="plat" type="text" required maxlength="12" pattern="[A-Z]{1,2} [0-9]{1,4} [A-Z]{1,3}" title="Format: N 1234 AB" style="text-transform:uppercase" placeholder="N 1234 AB" /><p class="hint">Plat nomor harus unik.</p></div>
+    <div><label for="thn">Tahun</label><input id="thn" name="tahun" type="number" min="1990" max="2026" required /></div>
+    <div><label for="warna">Warna</label><input id="warna" name="warna" type="text" maxlength="30" required /></div>
+    <div><label for="trans">Transmisi</label><select id="trans" name="transmisi" required><option>Manual</option><option>Matic</option></select></div>
+    <div><label for="odo">Odometer (km)</label><input id="odo" name="odometer" type="number" min="0" step="1" required /></div>
+    <div><label for="status">Status</label><select id="status" name="status" required><option>Tersedia</option><option>Dalam servis</option><option>Tidak tersedia</option></select>
+      <p class="hint">Disewa mengikuti pesanan Berjalan. Tandai Tidak tersedia bila unit dibawa keluar kota.</p></div>
+  </div></section>
+<section class="kartu"><h2>Detail internal</h2><p class="ket">Hanya terlihat oleh admin.</p>
+  <div class="kolom-2">
+    <div><label for="pemilik">Nama pemilik</label><input id="pemilik" name="pemilik" type="text" maxlength="100" /></div>
+    <div><label for="milik">Status kepemilikan</label><select id="milik" name="status_kepemilikan"><option>Milik perusahaan</option><option>Titipan</option></select></div>
+    <div><label for="rangka">No. rangka</label><input id="rangka" name="no_rangka" type="text" maxlength="30" /></div>
+    <div><label for="mesin">No. mesin</label><input id="mesin" name="no_mesin" type="text" maxlength="30" /></div>
+    <div><label for="bpkb">No. BPKB</label><input id="bpkb" name="no_bpkb" type="text" maxlength="30" /></div>
+    <div><label for="stnk">Masa berlaku STNK</label><input id="stnk" name="masa_stnk" type="date" /></div>
+  </div>
+  <label for="cat">Catatan</label><textarea id="cat" name="catatan" maxlength="300"></textarea></section>
+<div class="baris"><a class="btn" href="#konfirmasi">Simpan</a><a class="btn garis" href="kelola-mobil.html">Batal</a></div>
+</form>
+<div class="modal" id="konfirmasi" role="dialog" aria-modal="true" aria-label="Data sudah benar?">
+  <div class="isi"><h3>Data sudah benar?</h3><p>Unit akan disimpan dan daftar unit diperbarui.</p><div class="baris"><a class="btn garis sm" href="#">Kembali</a><button class="btn sm" type="submit" form="form-unit">Ya, simpan</button></div></div>
+</div>
+
+</main>
+</body>
+</html>

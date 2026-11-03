@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ganti kata sandi - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<header class="topbar"><a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="" /></a><span class="peran">Admin Rental</span>
+  <a class="btn garis sm" href="../guest/index.html">Keluar</a></header>
+<main class="halaman">
+<div class="halaman" style="max-width:480px;padding:0"><div class="kartu">
+  <h1 style="font-size:24px">Ganti kata sandi</h1>
+  <div class="alert info">Anda masuk dengan kata sandi sementara. Buat kata sandi baru sebelum melanjutkan.</div>
+  <form action="dashboard.html" method="get">
+    <label for="lama">Kata sandi sementara</label><input id="lama" name="lama" type="password" required autocomplete="current-password" />
+    <label for="baru">Kata sandi baru</label><input id="baru" name="baru" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" />
+    <p class="hint">Minimal 8 karakter dan ada angka.</p>
+    <label for="baru2">Konfirmasi kata sandi baru</label><input id="baru2" name="baru2" type="password" required pattern="(?=.*\d).{8,}" minlength="8" title="Minimal 8 karakter dan mengandung angka" autocomplete="new-password" />
+    <button class="btn blok" type="submit">Simpan</button>
+  </form>
+  
+</div></div>
+</main>
+</body>
+</html>

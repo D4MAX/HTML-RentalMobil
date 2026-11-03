@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serahkan unit - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="Dashboard admin" /></a>
+  <span class="peran">Admin Rental</span>
+  <a class="btn garis sm" href="../guest/index.html">Keluar</a>
+</header>
+<main class="halaman">
+  <a class="kembali" href="detail-dikonfirmasi.html">← Kembali ke pesanan</a>
+<div class="kepala-halaman"><div><h1>Serah Terima Unit</h1>
+  <span class="abu">RM-20261103-0010 · Siti Rahma. Catat jaminan dan kondisi awal, lalu serahkan unit. Status pesanan menjadi Berjalan.</span></div></div>
+<form action="detail-berjalan.html" method="get">
+<section class="kartu"><h2>Data Pesanan</h2>
+  <div class="kolom-4">
+    <div><span class="kecil abu">Pelanggan</span><br /><b>Siti Rahma</b></div><div><span class="kecil abu">Unit</span><br /><b>Avanza 2024 Matic</b></div>
+    <div><span class="kecil abu">Jenis</span><br /><b>Lepas kunci</b></div><div><span class="kecil abu">Tarif per hari</span><br /><b>Rp 350.000</b></div>
+  </div>
+  <div class="kolom-4 jarak"><div><span class="kecil abu">Durasi</span><br /><b>3 hari</b></div><div><span class="kecil abu">Lokasi jemput</span><br /><b>Jl. Veteran No. 1, Malang</b></div>
+    <div><span class="kecil abu">Tanggal kembali</span><br /><b>12 Nov 2026, 23.59</b></div><div><span class="kecil abu">Domisili pesanan</span><br /><b>Malang</b></div></div>
+  <div class="alert peringatan jarak" style="margin-bottom:0">Periksa lokasi antar: jika di luar batas Tlogomas, hubungi pelanggan lewat <a class="tautan" href="https://wa.me/6281234567890">WhatsApp</a> untuk biaya antar.</div>
+</section>
+
+<section class="kartu"><h2>Unit yang Diserahkan</h2><p class="ket">Daftar hanya berisi unit tipe ini yang kosong pada tanggal sewa. Unit pengganti dari tipe yang sama, atau tipe setara atau lebih tinggi dengan persetujuan pelanggan, diperbolehkan.</p>
+  <label for="plat">Plat nomor</label>
+  <select id="plat" name="plat" required><option value="">Pilih unit</option><option>N 2001 CA · Avanza 2024 Matic · 12.300 km</option><option>N 2002 CB · Avanza 2024 Matic · 8.900 km</option></select>
+</section>
+
+<section class="kartu"><h2>Jaminan Diterima</h2><p class="ket">Sewa lepas kunci. Admin memeriksa dokumen fisik dan mencocokkan nama dengan KTP.</p>
+  <div class="kolom-2">
+    <div><label for="identitas">No. identitas penyewa</label><input id="identitas" name="no_identitas" type="text" inputmode="numeric" pattern="[0-9]{16}" title="16 digit sesuai KTP" required /></div>
+    <div><label for="dom">Domisili pesanan</label><select id="dom" name="domisili" required><option selected>Malang</option><option>Luar kota</option></select>
+      <p class="hint">Sesuaikan jika KTP berbeda. Perubahan dicatat di riwayat aktivitas.</p></div>
+  </div>
+  <div class="kotak-jaminan">
+    <div class="cek"><input type="checkbox" id="ja" name="ja" required /><label for="ja">a. KTP asli</label></div>
+    <div class="cek"><input type="checkbox" id="jb" name="jb" required /><label for="jb">b. SIM C asli</label></div>
+    <div class="cek"><input type="checkbox" id="jc" name="jc" required /><label for="jc">c. Salah satu dari KTM, KK, NPWP, BPJS, atau paspor</label></div>
+    <div class="cek"><input type="checkbox" id="jd" name="jd" /><label for="jd">d. Sepeda motor dan STNK (domisili Malang)</label></div>
+    <div class="cek"><input type="checkbox" id="je" name="je" /><label for="je">e. Bukti booking transportasi umum dan bukti booking hotel (domisili luar kota)</label></div>
+  </div>
+  <p class="hint">Centang d untuk domisili Malang atau e untuk luar kota. Untuk e, cocokkan nama dengan KTP, tanggal dengan masa sewa, dan kode booking ke sumbernya, lalu catat hasilnya di catatan admin.</p>
+</section>
+
+<section class="kartu"><h2>Kondisi Awal Unit</h2>
+  <div class="kolom-3">
+    <div><label for="odo">Odometer awal (km)</label><input id="odo" name="odometer_awal" type="number" min="0" step="1" required /></div>
+    <div><label for="bbm">BBM awal</label><select id="bbm" name="bbm_awal" required><option>Penuh</option><option>3/4</option><option>1/2</option><option>1/4</option><option>Hampir kosong</option></select></div>
+    <div><label for="foto">Foto kondisi (opsional)</label><input id="foto" name="foto_kondisi" type="file" accept="image/jpeg,image/png" /></div>
+  </div>
+  <label for="kondisi">Catatan kondisi awal</label><textarea id="kondisi" name="catatan_kondisi" maxlength="500" required placeholder="Ringkas: lecet, kelengkapan, kebersihan"></textarea>
+</section>
+
+<section class="kartu"><h2>Konfirmasi</h2><p class="ket">Setelah disimpan, status pesanan menjadi Berjalan dan unit berstatus disewa.</p>
+  <div class="baris"><button class="btn" type="submit">Serahkan unit</button><a class="btn garis" href="detail-dikonfirmasi.html">Batal</a></div>
+</section>
+</form>
+
+</main>
+</body>
+</html>

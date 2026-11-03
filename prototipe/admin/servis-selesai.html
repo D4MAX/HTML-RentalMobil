@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selesai servis - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="Dashboard admin" /></a>
+  <span class="peran">Admin Rental</span>
+  <a class="btn garis sm" href="../guest/index.html">Keluar</a>
+</header>
+<main class="halaman">
+  <a class="kembali" href="servis.html">← Kembali ke Servis</a>
+<div class="kepala-halaman"><div><h1>Selesai servis</h1><span class="abu"><span class="plat">N 5005 GH</span> Brio · masuk 2 Nov 2026 · Bengkel Maju Jaya</span></div></div>
+<form action="servis.html" method="get">
+<section class="kartu"><h2>Komponen yang dikerjakan</h2><p class="ket">Pilih satu atau lebih.</p><div class="kolom-2"><div class="cek"><input type="checkbox" id="c1" name="komponen" value="Oli mesin" /><label for="c1">Oli mesin</label></div><div class="cek"><input type="checkbox" id="c2" name="komponen" value="Filter oli" /><label for="c2">Filter oli</label></div><div class="cek"><input type="checkbox" id="c3" name="komponen" value="Filter udara" /><label for="c3">Filter udara</label></div><div class="cek"><input type="checkbox" id="c4" name="komponen" value="Rem" /><label for="c4">Rem</label></div><div class="cek"><input type="checkbox" id="c5" name="komponen" value="Ban" /><label for="c5">Ban</label></div><div class="cek"><input type="checkbox" id="c6" name="komponen" value="Aki" /><label for="c6">Aki</label></div><div class="cek"><input type="checkbox" id="c7" name="komponen" value="Kampas kopling" /><label for="c7">Kampas kopling</label></div><div class="cek"><input type="checkbox" id="c8" name="komponen" value="Lainnya" /><label for="c8">Lainnya</label></div></div></section>
+<section class="kartu"><h2>Biaya dan odometer</h2>
+  <div class="kolom-3">
+    <div><label for="bk">Biaya bengkel (Rp)</label><input id="bk" name="biaya_bengkel" type="number" min="0" step="1000" required /></div>
+    <div><label for="bd">Biaya ditagih ke penyewa (Rp)</label><input id="bd" name="biaya_ditagih" type="number" min="0" step="1000" value="0" /></div>
+    <div><label for="odo">Odometer (km)</label><input id="odo" name="odometer" type="number" min="55100" step="1" required /></div>
+  </div>
+  <div class="ringkasan"><div class="baris"><span>Selisih biaya</span><span>dihitung sistem</span></div><div class="baris"><span>Jadwal servis berikutnya</span><span>dihitung dari odometer dan interval</span></div></div>
+  <div class="baris jarak"><button class="btn" type="submit">Selesai servis</button><a class="btn garis" href="servis.html">Batal</a></div>
+</section>
+</form>
+
+</main>
+</body>
+</html>

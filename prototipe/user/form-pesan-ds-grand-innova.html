@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan Grand Innova - RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/index.css" />
+  <link rel="stylesheet" href="../../css/pesan.css" />
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Logo RentalMalang" /> GANTENGNYAJATIMGROUP</a>
+  <input type="checkbox" id="burger-cek" class="burger-cek" aria-hidden="true" />
+  <label class="burger" for="burger-cek" aria-label="Buka menu">☰</label>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a class="aktif" href="katalog.html">Car</a><a href="riwayat.html">Riwayat Pemesanan</a>
+    <div class="kanan"><a class="nama-user" href="profil.html"><span class="avatar">BS</span>Budi Santoso</a><a class="btn garis" href="../guest/index.html">Keluar</a></div>
+  </div>
+</nav>
+<section class="hero banner"><h1>PESAN <span>GRAND INNOVA</span></h1></section>
+<main class="wrap">
+  <a class="kembali" href="katalog-hasil.html">← Kembali ke katalog</a>
+  <div class="dua-kolom">
+    <section aria-label="Detail mobil">
+      <div class="kotak">
+        <input class="radio-foto" type="radio" name="foto" id="foto0" checked /><input class="radio-foto" type="radio" name="foto" id="foto1" /><input class="radio-foto" type="radio" name="foto" id="foto2" /><input class="radio-foto" type="radio" name="foto" id="foto3" />
+        <div class="foto-besar"><img class="fu fu0" src="../img/mobil/foto/ds-grand-innova-1.jpg" alt="Grand Innova foto 1" loading="lazy" /><img class="fu fu1" src="../img/mobil/foto/ds-grand-innova-2.jpg" alt="Grand Innova foto 2" loading="lazy" /><img class="fu fu2" src="../img/mobil/foto/ds-grand-innova-3.jpg" alt="Grand Innova foto 3" loading="lazy" /><img class="fu fu3" src="../img/mobil/foto/ds-grand-innova-4.jpg" alt="Grand Innova foto 4" loading="lazy" /></div>
+        <div class="galeri-kecil"><label class="kecil-foto kf0" for="foto0"><img src="../img/mobil/foto/ds-grand-innova-1.jpg" alt="Foto 1" loading="lazy" /></label><label class="kecil-foto kf1" for="foto1"><img src="../img/mobil/foto/ds-grand-innova-2.jpg" alt="Foto 2" loading="lazy" /></label><label class="kecil-foto kf2" for="foto2"><img src="../img/mobil/foto/ds-grand-innova-3.jpg" alt="Foto 3" loading="lazy" /></label><label class="kecil-foto kf3" for="foto3"><img src="../img/mobil/foto/ds-grand-innova-4.jpg" alt="Foto 4" loading="lazy" /></label></div>
+        <h2 style="margin-bottom:4px">Grand Innova</h2>
+        <p><b>Dengan sopir:</b> Rp 750.000/hari.</p>
+        <table class="spek-tabel"><tr><td>Kursi</td><td>7 kursi</td></tr><tr><td>Bahan bakar</td><td>Bensin</td></tr><tr><td>Transmisi</td><td>Manual</td></tr></table>
+        <div class="grid grid-2"><div><p class="tebal">Termasuk:</p><ul class="daftar-tanda"><li>Mobil</li><li>Sopir</li><li>BBM</li></ul></div><div><p class="tebal">Ditanggung penyewa:</p><ul class="daftar-tanda tidak"><li>Makan sopir</li><li>Tol</li><li>Parkir</li><li>Penginapan sopir</li></ul></div></div><p class="kecil abu">Hanya untuk tujuan di Malang dan Batu.</p>
+      </div>
+      <h3 class="jarak-kecil">Ulasan</h3>
+      <div class="kotak ulasan"><div class="bintang">★★★★★</div><p>Mobil nyaman dan sesuai foto.</p><div class="penulis"><span class="avatar">A</span><b>Andi</b></div></div>
+    </section>
+
+    <form class="kotak" action="pembayaran.html" method="get" aria-label="Form pesan">
+      <h2 style="font-size:22px">Form Pesan</h2>
+      <p class="kecil">Jenis sewa: <b>Dengan sopir</b></p><input type="hidden" name="jenis" value="dengan_sopir" />
+      <div class="field baris-2">
+        <div><label for="tgl">Tanggal mulai</label><input id="tgl" name="tgl_mulai" type="date" min="2026-11-05" max="2026-12-04" required /></div>
+        <div><label for="dur">Durasi (hari)</label><input id="dur" name="durasi" type="number" min="1" max="30" step="1" value="3" required /></div>
+      </div>
+      <div class="field"><label for="jam">Jam jemput</label><input id="jam" name="jam_jemput" type="time" required /></div>
+        <div class="field"><label for="tujuan">Tujuan perjalanan</label>
+          <input id="tujuan" name="tujuan" type="text" maxlength="200" required placeholder="Batu, Malang kota" />
+          <p class="hint">Boleh lebih dari satu, pisahkan dengan koma.</p></div>
+        <div class="field"><label for="wilayah">Semua tujuan di Malang dan Batu?</label>
+          <select id="wilayah" name="dalam_wilayah" required><option>Ya</option><option>Tidak</option></select>
+          <p class="hint">Jika tidak, hubungi admin lewat <a class="tautan" href="https://wa.me/6281234567890">WhatsApp</a>.</p></div>
+      <div class="field"><label for="lokasi">Lokasi jemput</label><input id="lokasi" name="lokasi" type="text" maxlength="200" required placeholder="Alamat lengkap" /></div>
+      <div class="field"><label for="catatan">Catatan (opsional)</label><textarea id="catatan" name="catatan" maxlength="300"></textarea></div>
+      <div class="cek"><input type="checkbox" id="setuju-sk" name="setuju_sk" required /><label for="setuju-sk">Saya menyetujui <a class="tautan" href="syarat.html" target="_blank" rel="noopener">Syarat dan Ketentuan</a>.</label></div>
+      <div class="ringkasan" aria-label="Ringkasan biaya">
+        <div class="baris"><span>Tarif × durasi</span><span>Rp 750.000 × 3 hari</span></div>
+        <div class="baris"><span>Tanggal kembali</span><span>12 Nov 2026, 23.59</span></div>
+        <div class="baris total"><span>Total</span><span>Rp 2.250.000</span></div>
+      </div>
+      <button class="btn blok" type="submit">Buat Pesanan</button>
+      <p class="hint kecil abu" style="margin-top:8px">Metode pembayaran dipilih di pop-up pembayaran.</p>
+    </form>
+  </div>
+  
+</main>
+<footer class="footer">
+  <div class="footer-isi">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html"><img src="../img/gantengnyo.png" alt="Logo RentalMalang" /><span>GANTENGNYAJATIMGROUP</span></a>
+      <p>Layanan sewa mobil dengan sopir atau lepas kunci, siap menemani perjalananmu di Malang, Batu, dan sekitarnya.</p>
+      <div class="footer-sosial">
+        <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><img src="../img/ikon-wa.png" alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../img/ig.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-kolom">
+      <h4>Perusahaan</h4>
+      <a href="about.html">Tentang Kami</a>
+      <a href="syarat.html">Syarat dan Ketentuan</a>
+      <a href="privasi.html">Kebijakan Privasi</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Bantuan</h4>
+      <a href="faq.html">FAQ</a>
+      <a href="https://wa.me/6281234567890">Hubungi Admin</a>
+      <a href="katalog.html">Katalog Mobil</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Kontak</h4>
+      <p>PT GantengnyaJatim Group<br />Kota Malang, Jawa Timur</p>
+      <p>WhatsApp: 0812-3456-7890<br />Email: gantengnyajatimgroupindonesia@gmail.com</p>
+      <p>Jam operasional 07.00 sampai 21.00 setiap hari.</p>
+    </div>
+  </div>
+  <div class="footer-bawah">© 2026 RentalMalang. Hak Cipta Dilindungi.</div>
+</footer>
+</body>
+</html>

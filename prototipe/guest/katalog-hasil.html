@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car - RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/index.css" />
+  <link rel="stylesheet" href="../../css/katalog.css" />
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Logo RentalMalang" /> GANTENGNYAJATIMGROUP</a>
+  <input type="checkbox" id="burger-cek" class="burger-cek" aria-hidden="true" />
+  <label class="burger" for="burger-cek" aria-label="Buka menu">☰</label>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a class="aktif" href="katalog.html">Car</a>
+    <div class="kanan"><a class="btn garis" href="masuk.html">Masuk</a><a class="btn" href="daftar.html">Daftar</a></div>
+  </div>
+</nav>
+<section class="hero banner"><h1>KATALOG <span>MOBIL</span></h1></section>
+<main class="wrap">
+  <form class="kotak pencarian" action="katalog-hasil.html" method="get">
+  <div><label for="tgl">Tanggal mulai</label><input id="tgl" name="tgl_mulai" type="date" value="2026-11-10" min="2026-11-05" max="2026-12-04" required /></div>
+  <div><label for="dur">Durasi (hari)</label><input id="dur" name="durasi" type="number" value="3" min="1" max="30" step="1" required /></div>
+  <div><label for="kursi">Kursi</label><select id="kursi" name="kursi"><option value="">Semua</option><option>5 kursi</option><option>7 kursi</option><option>9 ke atas</option></select></div>
+  <div><label for="trans">Transmisi</label><select id="trans" name="transmisi"><option value="">Semua</option><option>Manual</option><option>Matic</option></select></div>
+  <div><button class="btn" type="submit">Cari</button></div>
+</form>
+<p class="kecil">Tanggal mulai paling cepat besok dan paling jauh 30 hari. Durasi 1 sampai 30 hari.</p>
+  <p class="abu">Mobil tersedia untuk 10 November 2026, 3 hari.</p>
+  <input class="radio-tab" type="radio" name="tab" id="tab-ds" checked />
+  <input class="radio-tab" type="radio" name="tab" id="tab-ts" />
+  <div class="tab-baris">
+    <label class="tab tab-ds" for="tab-ds">Dengan Sopir</label>
+    <label class="tab tab-ts" for="tab-ts">Lepas Kunci</label>
+  </div>
+  <div class="grid-mobil daftar-ds"><div class="kotak mobil">
+  <img src="../img/mobil/ds-innova-reborn.png" alt="Innova Reborn" loading="lazy" />
+  <div class="nama">Innova Reborn</div>
+  <div class="isi">
+    7 kursi · Diesel · Manual / Matic<br /><b class="oranye">Rp 800.000</b>/hari<br />
+    ★ 4,8 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-avanza-2022.png" alt="Avanza 2022" loading="lazy" />
+  <div class="nama">Avanza 2022</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 650.000</b>/hari<br />
+    ★ 4,7 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-avanza-2022.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-avanza-2024.png" alt="Avanza 2024" loading="lazy" />
+  <div class="nama">Avanza 2024</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 700.000</b>/hari<br />
+    ★ 4,6 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-avanza-2024.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-rush-trd.png" alt="Rush TRD" loading="lazy" />
+  <div class="nama">Rush TRD</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 700.000</b>/hari<br />
+    ★ 4,8 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-rush-trd.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-xl7.png" alt="XL7" loading="lazy" />
+  <div class="nama">XL7</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 700.000</b>/hari<br />
+    ★ 4,7 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-xl7.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-brio.png" alt="Brio" loading="lazy" />
+  <div class="nama">Brio</div>
+  <div class="isi">
+    5 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 600.000</b>/hari<br />
+    ★ 4,6 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-brio.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-grand-innova.png" alt="Grand Innova" loading="lazy" />
+  <div class="nama">Grand Innova</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual<br /><b class="oranye">Rp 750.000</b>/hari<br />
+    ★ 4,8 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-grand-innova.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-zenix-q.png" alt="Innova Zenix Q Modelista" loading="lazy" />
+  <div class="nama">Innova Zenix Q Modelista</div>
+  <div class="isi">
+    7 kursi · Matic<br /><b class="oranye">Rp 1.750.000</b>/hari<br />
+    ★ 4,7 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-zenix-q.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-innova-venturer.png" alt="Innova Venturer" loading="lazy" />
+  <div class="nama">Innova Venturer</div>
+  <div class="isi">
+    7 kursi · Diesel · Matic<br /><b class="oranye">Rp 1.300.000</b>/hari<br />
+    ★ 4,6 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-innova-venturer.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-alphard-2022.png" alt="Alphard 2022" loading="lazy" />
+  <div class="nama">Alphard 2022</div>
+  <div class="isi">
+    7 kursi · Bensin · Matic<br /><b class="oranye">Rp 2.700.000</b>/hari<br />
+    ★ 4,8 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-alphard-2022.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-hiace-commuter.png" alt="Hiace Commuter" loading="lazy" />
+  <div class="nama">Hiace Commuter</div>
+  <div class="isi">
+    14 kursi · Diesel · Manual<br /><b class="oranye">Rp 1.200.000</b>/hari<br />
+    ★ 4,7 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-hiace-commuter.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-zenix-g.png" alt="Innova Zenix Type G" loading="lazy" />
+  <div class="nama">Innova Zenix Type G</div>
+  <div class="isi">
+    7 kursi · Bensin · Matic<br /><b class="oranye">Rp 1.000.000</b>/hari<br />
+    ★ 4,6 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-zenix-g.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-fortuner-vrz.png" alt="Fortuner VRZ" loading="lazy" />
+  <div class="nama">Fortuner VRZ</div>
+  <div class="isi">
+    7 kursi · Diesel · Matic<br /><b class="oranye">Rp 1.600.000</b>/hari<br />
+    ★ 4,8 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-fortuner-vrz.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-hiace-premio.png" alt="Hiace Premio" loading="lazy" />
+  <div class="nama">Hiace Premio</div>
+  <div class="isi">
+    <b class="oranye">Rp 1.400.000</b>/hari<br />
+    ★ 4,7 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-hiace-premio.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-hiace-premio-luxury.png" alt="Hiace Premio Luxury" loading="lazy" />
+  <div class="nama">Hiace Premio Luxury</div>
+  <div class="isi">
+    <b class="oranye">Rp 1.900.000</b>/hari<br />
+    ★ 4,6 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-hiace-premio-luxury.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ds-zenix-v.png" alt="Innova Zenix Type V" loading="lazy" />
+  <div class="nama">Innova Zenix Type V</div>
+  <div class="isi">
+    7 kursi · Matic<br /><b class="oranye">Rp 1.250.000</b>/hari<br />
+    ★ 4,8 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ds-zenix-v.html">Pesan</a>
+  </div>
+</div></div>
+  <div class="grid-mobil daftar-ts"><div class="kotak mobil">
+  <img src="../img/mobil/ts-avanza-2022.png" alt="Avanza 2022" loading="lazy" />
+  <div class="nama">Avanza 2022</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 300.000</b>/hari<br />
+    ★ 4,8 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-avanza-2022.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-avanza-2024-manual.png" alt="Avanza 2024 Manual" loading="lazy" />
+  <div class="nama">Avanza 2024 Manual</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual<br /><b class="oranye">Rp 325.000</b>/hari<br />
+    ★ 4,7 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-avanza-2024-manual.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-avanza-2024-matic.png" alt="Avanza 2024 Matic" loading="lazy" />
+  <div class="nama">Avanza 2024 Matic</div>
+  <div class="isi">
+    7 kursi · Bensin · Matic<br /><b class="oranye">Rp 350.000</b>/hari<br />
+    ★ 4,6 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-avanza-2024-matic.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-brio.png" alt="Brio" loading="lazy" />
+  <div class="nama">Brio</div>
+  <div class="isi">
+    5 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 275.000</b>/hari<br />
+    ★ 4,8 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-brio.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-rush-trd.png" alt="Rush TRD" loading="lazy" />
+  <div class="nama">Rush TRD</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 375.000</b>/hari<br />
+    ★ 4,7 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-rush-trd.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-xl7.png" alt="XL7" loading="lazy" />
+  <div class="nama">XL7</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual / Matic<br /><b class="oranye">Rp 375.000</b>/hari<br />
+    ★ 4,6 · Sisa 1 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-xl7.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-xenia-2018.png" alt="Xenia 2018" loading="lazy" />
+  <div class="nama">Xenia 2018</div>
+  <div class="isi">
+    7 kursi · Bensin · Manual<br /><b class="oranye">Rp 300.000</b>/hari<br />
+    ★ 4,8 · Sisa 2 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-xenia-2018.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-zenix-reborn-manual.png" alt="Zenix Reborn Manual" loading="lazy" />
+  <div class="nama">Zenix Reborn Manual</div>
+  <div class="isi">
+    7 kursi · Diesel · Manual<br /><b class="oranye">Rp 450.000</b>/hari<br />
+    ★ 4,7 · Sisa 4 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-zenix-reborn-manual.html">Pesan</a>
+  </div>
+</div><div class="kotak mobil">
+  <img src="../img/mobil/ts-zenix-reborn-matic.png" alt="Zenix Reborn Matic" loading="lazy" />
+  <div class="nama">Zenix Reborn Matic</div>
+  <div class="isi">
+    7 kursi · Diesel · Matic<br /><b class="oranye">Rp 500.000</b>/hari<br />
+    ★ 4,6 · Sisa 3 unit<br /><br />
+    <a class="btn" href="form-pesan-ts-zenix-reborn-matic.html">Pesan</a>
+  </div>
+</div></div>
+  <div class="demo"><div class="judul">keadaan lain</div><a class="tautan" href="katalog-kosong.html">Lihat keadaan: tidak ada mobil tersedia pada tanggal itu</a></div>
+</main>
+<footer class="footer">
+  <div class="footer-isi">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html"><img src="../img/gantengnyo.png" alt="Logo RentalMalang" /><span>GANTENGNYAJATIMGROUP</span></a>
+      <p>Layanan sewa mobil dengan sopir atau lepas kunci, siap menemani perjalananmu di Malang, Batu, dan sekitarnya.</p>
+      <div class="footer-sosial">
+        <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><img src="../img/ikon-wa.png" alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../img/ig.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="footer-kolom">
+      <h4>Perusahaan</h4>
+      <a href="about.html">Tentang Kami</a>
+      <a href="syarat.html">Syarat dan Ketentuan</a>
+      <a href="privasi.html">Kebijakan Privasi</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Bantuan</h4>
+      <a href="faq.html">FAQ</a>
+      <a href="https://wa.me/6281234567890">Hubungi Admin</a>
+      <a href="katalog.html">Katalog Mobil</a>
+    </div>
+    <div class="footer-kolom">
+      <h4>Kontak</h4>
+      <p>PT GantengnyaJatim Group<br />Kota Malang, Jawa Timur</p>
+      <p>WhatsApp: 0812-3456-7890<br />Email: gantengnyajatimgroupindonesia@gmail.com</p>
+      <p>Jam operasional 07.00 sampai 21.00 setiap hari.</p>
+    </div>
+  </div>
+  <div class="footer-bawah">© 2026 RentalMalang. Hak Cipta Dilindungi.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laporan - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="" /><span>Gantengnya Admin<small>Rental Mobil</small></span></a>
+    <nav aria-label="Menu admin"><a href="dashboard.html">Dashboard</a><a href="kelola-mobil.html">Kelola Mobil</a><a href="pesanan.html">Pesanan</a><a href="servis.html">Servis</a><a class="aktif" href="laporan.html">Laporan</a></nav>
+    <div class="keluar"><a href="../guest/index.html">Keluar</a></div>
+  </aside>
+  <main class="main">
+    <header><h1>Laporan Transaksi</h1><p>Semua pendapatan dari pesanan yang sudah dikonfirmasi.</p></header>
+<form class="kartu filter" action="laporan-kosong.html" method="get">
+  <div><label for="per">Periode (menurut tanggal mulai sewa)</label><select id="per" name="periode"><option selected>7 hari terakhir</option><option>30 hari terakhir</option><option>Bulan ini</option><option>Bulan lalu</option></select></div>
+  <div><label for="st">Status</label><select id="st" name="status"><option value="">Semua</option><option>Menunggu pembayaran</option><option>Dikonfirmasi</option><option>Berjalan</option><option>Selesai</option><option>Pengajuan pembatalan</option><option>Dibatalkan</option></select></div>
+  <div><button class="btn" type="submit">Terapkan</button></div>
+  <div style="margin-left:auto"><a class="btn garis" href="laporan.pdf">Unduh PDF</a></div></form>
+<p class="abu">Periode: 29 Okt sampai 4 Nov 2026 (7 hari terakhir).</p>
+<div class="grid grid-3">
+  <div class="kartu stat warna"><div class="label">Total pendapatan</div><div class="angka">Rp 2.800.000</div><p class="ket">Dikonfirmasi, Berjalan, dan Selesai; sewa ditambah tagihan tambahan</p></div>
+  <div class="kartu stat"><div class="label">Jumlah transaksi</div><div class="angka">4</div></div>
+  <div class="kartu stat"><div class="label">Dibatalkan</div><div class="angka">1</div></div>
+</div>
+<p class="jarak">Rincian per status: <span class="badge berjalan">Berjalan 1</span> <span class="badge selesai">Selesai 2</span> <span class="badge dibatalkan">Dibatalkan 1</span></p>
+<section class="kartu"><h2>Pesanan pada periode ini</h2><div class="tabel-bungkus"><table class="tabel"><thead><tr><th>No</th><th>Tanggal mulai</th><th>Pesanan</th><th>Pelanggan</th><th>Unit</th><th>Jenis</th><th>Status</th><th class="angka">Total</th></tr></thead><tbody><tr><td>1</td><td>3 Nov 2026</td><td class="tebal">RM-20261101-0004</td><td>Dimas Prakoso</td><td>Rush TRD</td><td>Lepas kunci</td><td><span class="badge berjalan">Berjalan</span></td><td class="angka">Rp 1.125.000</td></tr><tr><td>2</td><td>30 Okt 2026</td><td class="tebal">RM-20261018-0003</td><td>Eko Prasetyo</td><td>Brio</td><td>Lepas kunci</td><td><span class="badge selesai">Selesai</span></td><td class="angka">Rp 550.000</td></tr><tr><td>3</td><td>29 Okt 2026</td><td class="tebal">RM-20261024-0002</td><td>Andi Wijaya</td><td>Rush TRD</td><td>Lepas kunci</td><td><span class="badge selesai">Selesai</span></td><td class="angka">Rp 1.125.000</td></tr><tr><td>4</td><td>1 Nov 2026</td><td class="tebal">RM-20261020-0001</td><td>Budi Santoso</td><td>Xenia 2018</td><td>Lepas kunci</td><td><span class="badge dibatalkan">Dibatalkan</span></td><td class="angka">-</td></tr></tbody></table></div></section>
+<div class="demo"><div class="judul">keadaan lain</div><a class="tautan" href="laporan-kosong.html">Lihat keadaan: tidak ada data pada periode ini</a></div>
+  </main>
+</div>
+</body>
+</html>

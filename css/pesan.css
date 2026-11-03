@@ -1,0 +1,142 @@
+/* Halaman detail pesan (pesan-ds-*.html dan pesan-ts-*.html) memakai index.css untuk navbar,
+   kotak, tombol, dan footer. File ini hanya berisi tambahan khusus halaman ini. Tanpa JavaScript. */
+
+.hero.banner {
+  padding: 90px 6vw calc(90px + var(--gelombang));
+}
+.kembali {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dua-kolom {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* lebar kolom: ubah jadi 1fr 1.2fr kalau form mau lebih lebar */
+  gap: 16px;
+  align-items: start;
+}
+.dua-kolom > * {
+  min-width: 0; /* cegah kolom melebar melewati layar di HP */
+}
+.kecil {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ===== FOTO MOBIL (klik foto kecil untuk memperbesar, tanpa JavaScript) =====
+   Radio tersembunyi harus berada sebelum .foto-besar dan .galeri-kecil. */
+.radio-foto {
+  display: none;
+}
+.fu {
+  display: none;
+  width: 100%;
+  height: 260px; /* TINGGI foto utama: ubah angka ini */
+  object-fit: contain;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fbe6d3, #f0b98a);
+}
+#foto0:checked ~ .foto-besar .fu0,
+#foto1:checked ~ .foto-besar .fu1,
+#foto2:checked ~ .foto-besar .fu2,
+#foto3:checked ~ .foto-besar .fu3,
+#foto4:checked ~ .foto-besar .fu4,
+#foto5:checked ~ .foto-besar .fu5,
+#foto6:checked ~ .foto-besar .fu6,
+#foto7:checked ~ .foto-besar .fu7 {
+  display: block;
+}
+.galeri-kecil {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 8px 0 14px;
+}
+.kecil-foto {
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+.kecil-foto img {
+  width: 100%;
+  height: 70px; /* TINGGI foto kecil: ubah angka ini */
+  object-fit: contain;
+  display: block;
+  background: #e8a672;
+}
+#foto0:checked ~ .galeri-kecil .kf0,
+#foto1:checked ~ .galeri-kecil .kf1,
+#foto2:checked ~ .galeri-kecil .kf2,
+#foto3:checked ~ .galeri-kecil .kf3,
+#foto4:checked ~ .galeri-kecil .kf4,
+#foto5:checked ~ .galeri-kecil .kf5,
+#foto6:checked ~ .galeri-kecil .kf6,
+#foto7:checked ~ .galeri-kecil .kf7 {
+  border-color: #dc6e27;
+}
+
+/* ===== FORM ===== */
+label {
+  font-weight: 500;
+  font-size: 13px;
+  display: block;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+  margin: 3px 0 12px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 8px 0 0;
+}
+.cek {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.cek label {
+  font-weight: 400;
+  font-size: 14px;
+}
+.syarat {
+  background: #fff4ea;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  margin: 6px 0 12px;
+}
+.ringkasan {
+  background: #fff4ea;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 12px 0;
+}
+form .btn {
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .dua-kolom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .hero.banner {
+    padding: 60px 9vw calc(60px + var(--gelombang));
+  }
+  .fu {
+    height: 200px;
+  }
+}

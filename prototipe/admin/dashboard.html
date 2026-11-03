@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Admin - Admin RentalMalang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/admin.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="dashboard.html"><img src="../img/logo.png" alt="" /><span>Gantengnya Admin<small>Rental Mobil</small></span></a>
+    <nav aria-label="Menu admin"><a class="aktif" href="dashboard.html">Dashboard</a><a href="kelola-mobil.html">Kelola Mobil</a><a href="pesanan.html">Pesanan</a><a href="servis.html">Servis</a><a href="laporan.html">Laporan</a></nav>
+    <div class="keluar"><a href="../guest/index.html">Keluar</a></div>
+  </aside>
+  <main class="main">
+    <header><h1>Dashboard Admin</h1><p>Ringkasan operasional hari ini.</p></header>
+<div class="grid grid-3" style="grid-template-columns:repeat(6,1fr)"><div class="kartu stat"><div class="label">Menunggu pembayaran</div><div class="angka">1</div></div><div class="kartu stat"><div class="label">Dikonfirmasi</div><div class="angka">1</div></div><div class="kartu stat"><div class="label">Berjalan</div><div class="angka">1</div></div><div class="kartu stat"><div class="label">Pengajuan pembatalan</div><div class="angka">1</div></div><div class="kartu stat"><div class="label">Selesai</div><div class="angka">2</div></div><div class="kartu stat"><div class="label">Dibatalkan</div><div class="angka">1</div></div></div>
+<div class="grid grid-3 jarak">
+  <div class="kartu stat"><div class="label">Unit tersedia</div><div class="angka">14</div><p class="ket">siap dipesan</p></div>
+  <div class="kartu stat"><div class="label">Unit dalam servis</div><div class="angka">2</div><p class="ket">tidak muncul di katalog</p></div>
+  <div class="kartu stat warna"><div class="label">Pendapatan terkonfirmasi</div><div class="angka">Rp 2.800.000</div><p class="ket">7 hari terakhir (Dikonfirmasi, Berjalan, Selesai)</p></div>
+</div>
+<section class="kartu jarak"><h2>Perlu tindakan</h2><p class="ket">Pesanan yang menunggu keputusan atau pengerjaan admin.</p>
+  <div class="tabel-bungkus"><table class="tabel"><thead><tr><th>Tindakan</th><th>Pesanan</th><th>Pelanggan</th><th>Keterangan</th><th>Status</th><th></th></tr></thead><tbody><tr><td class="tebal">Serahkan unit</td><td>RM-20261103-0010</td><td>Siti Rahma</td><td>Mulai 10 Nov 2026</td><td><span class="badge dikonfirmasi">Dikonfirmasi</span></td><td><a class="tautan" href="detail-dikonfirmasi.html">Buka</a></td></tr><tr><td class="tebal">Selesaikan pesanan</td><td>RM-20261101-0004</td><td>Dimas Prakoso</td><td>Kembali 5 Nov 2026, 23.59</td><td><span class="badge berjalan">Berjalan</span></td><td><a class="tautan" href="detail-berjalan.html">Buka</a></td></tr><tr><td class="tebal">Proses pengajuan pembatalan</td><td>RM-20261102-0006</td><td>Rina Wulandari</td><td>Diajukan 3 Nov 2026</td><td><span class="badge pengajuan">Pengajuan pembatalan</span></td><td><a class="tautan" href="detail-pengajuan-pembatalan.html">Buka</a></td></tr><tr><td class="tebal">Tagih tagihan tambahan</td><td>RM-20261024-0002</td><td>Andi Wijaya</td><td>Rp 375.000 belum dibayar</td><td><span class="badge selesai">Selesai</span></td><td><a class="tautan" href="detail-selesai.html">Buka</a></td></tr></tbody></table></div></section>
+<section class="kartu"><h2>Pengingat servis</h2><p class="ket">Status dihitung dari odometer dan jadwal servis. <a class="tautan" href="servis.html">Buka halaman Servis</a></p>
+  <div class="tabel-bungkus"><table class="tabel"><tbody><tr><td class="tebal">Alphard 2022 · N 6006 IJ</td><td>Servis berkala lewat 5.000 km</td><td><span class="badge perlu">Perlu servis</span></td></tr><tr><td class="tebal">Rush TRD · N 3003 EF</td><td>Servis berikut pada 50.000 km (tersisa 800 km)</td><td><span class="badge segera">Segera</span></td></tr><tr><td class="tebal">Innova Reborn · N 1001 AA</td><td>Servis berikut pada 70.000 km</td><td><span class="badge aman">Aman</span></td></tr></tbody></table></div></section>
+
+  </main>
+</div>
+</body>
+</html>
